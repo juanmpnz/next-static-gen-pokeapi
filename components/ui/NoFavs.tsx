@@ -15,6 +15,7 @@ export const NoFavs = () => {
     >
       <Text h1> No hay favoritos</Text>
       <Image
+      alt="No tenes favoritos."
         width={250}
         height={250}
         css={{ opacity: "0.1" }}

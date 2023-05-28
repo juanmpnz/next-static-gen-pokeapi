@@ -3,7 +3,7 @@ import Head from "next/head";
 import { LayoutProps } from "@/interfaces";
 import { NavBar } from "../ui";
 
-const origin = (typeof window === undefined) ? "" : window.location.origin
+const origin = (typeof window === "undefined") ? "" : window.location.origin
 export const Layout = ({ children, titleTag }: LayoutProps) => {
  console.log(origin)
 

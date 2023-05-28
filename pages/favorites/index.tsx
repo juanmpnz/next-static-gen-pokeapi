@@ -5,7 +5,7 @@ import { NextPage } from "next";
 import React, { useEffect, useState } from "react";
 
 const Favorites: NextPage = () => {
-  const [favsPoke, setFavsPoke] = useState<number[]>([]);
+  const [favsPoke, setFavsPoke] = useState<any[]>([]);
 
   useEffect(() => {
     setFavsPoke(localFavorites.pokemons());

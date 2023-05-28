@@ -11,11 +11,12 @@ interface Props {
   pokemon: Pokemon;
 }
 
-const pokemonByName: NextPage<Props> = ({ pokemon }) => {
+const PokemonByName: NextPage<Props> = ({ pokemon }) => {
   const [isInFavorites, setIsInFavorites] = useState(false);
 
   useEffect(() => {
-    setIsInFavorites(localFavorites.existInFavorites(pokemon.id));
+    const setFavs = localFavorites.existInFavorites(pokemon.id)
+    setIsInFavorites(setFavs);
   }, [pokemon.id]);
 
   const onToggleFavorite = () => {
@@ -129,4 +130,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-export default pokemonByName;
+export default PokemonByName;

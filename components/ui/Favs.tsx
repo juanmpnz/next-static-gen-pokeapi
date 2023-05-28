@@ -26,6 +26,7 @@ export const Favs = ({ favsPoke }: Props) => {
                 {poke.name}
               </Text>
               <Image
+                alt={poke.name}
                 height={350}
                 src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${poke.id}.svg`}
               />
