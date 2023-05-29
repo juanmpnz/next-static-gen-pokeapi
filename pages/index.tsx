@@ -15,7 +15,7 @@ const HomePage: NextPage<Props> = ({ pokemons }) => {
     <Layout titleTag={"Listado de pokemons"}>
       <Grid.Container gap={2} justify="center">
         {pokemons.map((poke, i) => (
-          <Grid xs={12} sm={4} key={i}>
+          <Grid xs={12} sm={3} key={i}>
             <CardPokemon
               name={poke.name}
               img={poke.img}
@@ -30,7 +30,6 @@ const HomePage: NextPage<Props> = ({ pokemons }) => {
 };
 
 export const getStaticProps: GetStaticProps = async (context: any) => {
-  
   // las props que estoy retornando aqui, las voy a recibir en las props del componente
   const { data } = await pokeApi.get<PokemonListResponse>("pokemon?limit=151");
   const pokemons: SmallPokemons[] = data.results.map((poke, i) => ({

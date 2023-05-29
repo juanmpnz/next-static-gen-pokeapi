@@ -11,6 +11,7 @@ export const NoFavs = () => {
         alignItems: "center",
         alignSelf: "center",
         justifyContent: "center",
+        marginTop: "28px"
       }}
     >
       <Text h1> No hay favoritos</Text>

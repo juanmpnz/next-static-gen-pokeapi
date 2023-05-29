@@ -5,8 +5,6 @@ import { NavBar } from "../ui";
 
 const origin = (typeof window === "undefined") ? "" : window.location.origin
 export const Layout = ({ children, titleTag }: LayoutProps) => {
- console.log(origin)
-
   return (
     <>
       <Head>

@@ -3,18 +3,17 @@ import { SmallPokemons } from "@/interfaces";
 import { useRouter } from "next/router";
 
 export const CardPokemon = ({ name, url, img, id }: SmallPokemons) => {
-
-  const router = useRouter()
+  const router = useRouter();
 
   const onClick = () => {
-    router.push(`/name/${name}`)
-  }
+    router.push(`/name/${name}`);
+  };
 
   return (
-    <Card css={{ w: "100%", h: "400px" }}>
+    <Card css={{ w: "100%", h: "400px", marginTop:"28px" }}>
       <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
         <Col>
-          <Text h1 color="white" transform="capitalize">
+          <Text h2 color="white" transform="capitalize">
             {name}
           </Text>
         </Col>
@@ -24,7 +23,6 @@ export const CardPokemon = ({ name, url, img, id }: SmallPokemons) => {
           src={img ? img : ""}
           width="100%"
           height="100%"
-          
           alt="Card example background"
         />
       </Card.Body>
@@ -51,13 +49,7 @@ export const CardPokemon = ({ name, url, img, id }: SmallPokemons) => {
         <Row>
           <Col>
             <Row justify="flex-end">
-              <Button
-                flat
-                auto
-                rounded
-                color="warning"
-                onPress={onClick}
-              >
+              <Button flat auto rounded color="warning" onPress={onClick}>
                 <Text
                   css={{ color: "inherit" }}
                   size={12}
@@ -73,4 +65,4 @@ export const CardPokemon = ({ name, url, img, id }: SmallPokemons) => {
       </Card.Footer>
     </Card>
   );
-}
+};

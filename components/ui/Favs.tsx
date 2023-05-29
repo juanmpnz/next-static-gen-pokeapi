@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Card, Grid, Image, Text } from "@nextui-org/react";
-import router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 
 interface Props {
   favsPoke: any[];
@@ -13,9 +13,9 @@ export const Favs = ({ favsPoke }: Props) => {
   };
   return (
     <>
-      <Grid.Container gap={2} direction="row" justify="flex-start">
+      <Grid.Container gap={2} direction="row"  css={{marginTop:"28px"}}>
         {favsPoke.map((poke) => (
-          <Grid xs={6} sm={3} xl={1} key={poke.id}>
+          <Grid xs={12} sm={4} xl={4} key={poke.id}>
             <Card isHoverable css={{ padding: "10px" }}>
               <Text
                 css={{ color: "inherit" }}
